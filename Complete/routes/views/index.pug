@@ -9,7 +9,6 @@ block content
     div.ms-bgColor-neutralLight.welcome
       div.ms-fontSize-xl.ms-fontColor-themePrimary Welcome
       div.ms-fontSize-xl.ms-fontColor-themePrimary Search
-
       //let searchvalue: <input type="text" name="Search" value="" id="Product" placeholder="Type something..." style="text-align:center;"/>
       a: <input type="number" name="a" id="a"><br>
       b: <input type="number" name="b" id="b"><br>
@@ -19,15 +18,19 @@ block content
          function add(a,b) {
          var sum = parseInt(a) + parseInt(b);
          alert(sum);
-         }      //let searchvalue: <input type="text" name="Search" value="" id="textInput" placeholder="Type something..." style="text-align:center;"/>
-
+         }
          //script.
-          //var textInputElement = document.getElementById('textInput');
-          //textInputElement.addEventListener('keyup', function(){
-          //  var text = textInputElement.value;
-          //  console.log('New text is "' + text + '"');
-           
-          //  });
+          //const text = ''
+         // textInputElement.addEventListener('keyup', function(){
+          //var product = textInputElement.value;
+          //console.log('New text is "' + product + '"');
+          //var l = !{JSON.stringify(product)}
+          //console.log(1)
+          //script  
+           //include ..app.js
+           // });
+
+        
 
 
    
@@ -38,7 +41,7 @@ block content
       ul#file-list.ms-List.ordered-list
         li.ms-listItem #[span.ms-ListItem-primaryText 1] #[span.ms-ListItem-secondaryText Connects to SharePoint]
         li.ms-listItem #[span.ms-ListItem-primaryText 2] #[span.ms-ListItem-secondaryText Gets the names of the first ten files and folders in OneDrive.]
-        li.ms-listItem #[span.ms-ListItem-primaryText 3] #[span.ms-ListItem-secondaryText Adds the names to the current document. itemNames]
+        li.ms-listItem #[span.ms-ListItem-primaryText 3] #[span.ms-ListItem-secondaryText Adds the names to the current document.]
        
     div#message-area.welcome.ms-font-l
 
@@ -47,4 +50,7 @@ block content
       p(style="text-align:center;") 
         button#getGraphDataButton.popupButton.ms-Button.ms-Button--primary
           span.ms-Button-label Get SharePoint File Names
-  
+
+      p(style="text-align:center;") 
+        button#getsearchButton.popupButton.ms-Button.ms-Button--primary
+          span.ms-Button-la

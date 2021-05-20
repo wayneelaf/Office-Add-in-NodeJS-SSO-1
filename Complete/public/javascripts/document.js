@@ -80,3 +80,48 @@ function writeFileNamesToPresentation(result) {
         }
     );
 }
+
+
+//function writeFileNamesToPresentation(result) {
+
+//    var fileNames = "";
+//    for (var i = 0; i < result.length; i++) {
+//        fileNames += result[i] + '\n';
+//    }
+//    var filewebUrl = "";
+//    for (var i = 0; i < result.length; i++) {
+//        filewebUrl += result[i] + '\n';
+//    }
+
+
+//    Office.context.document.setSelectedDataAsync(
+//        fileNames,
+//        function (asyncResult) {
+//            if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+//                throw asyncResult.error.message;
+//            }
+//        }
+//    );
+
+//function writeFileNamesToPresentation(result) {
+
+//    var fileNames = "";
+//    for (var i = 0; i < result.length; i++) {
+//        fileNames += result[i] + '\n';
+//    }
+//    var filewebUrl = "";
+//    for (var i = 0; i < result.length; i++) {
+//        filewebUrl += result[i] + '\n';
+//    }
+
+//    Office.context.document.setSelectedDataAsync(
+//        fileNames,
+//        function (asyncResult) {
+//            if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+//                throw asyncResult.error.message;
+//            }
+//            Office.context.document.setSelectedDataAsync(
+
+//        }
+//    );
+//}

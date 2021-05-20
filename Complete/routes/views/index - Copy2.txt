@@ -1,0 +1,40 @@
+//- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See full license in root of repo. -->
+//- 
+//- This file defines the UI of the task pane page.
+
+extends layout
+
+block content
+  div#connectContainer
+    div.ms-bgColor-neutralLight.welcome
+      div.ms-fontSize-xl.ms-fontColor-themePrimary Welcome
+      div.ms-fontSize-xl.ms-fontColor-themePrimary Search
+      
+      let searchvalue: <input type="text" name="Search" value="" id="textInput" placeholder="Type something..." style="text-align:center;"/>
+     
+         script.
+          var textInputElement = document.getElementById('textInput');
+          textInputElement.addEventListener('keyup', function(){
+            var text1 = textInputElement.value;
+            console.log('New text is "' + text1 + '"');
+            });
+
+    div.ms-font-l This add-in demonstrates how to connect to Microsoft Graph from an add-in.
+    div.welcome-body
+      p.ms-font-xs.welcome-intro This add-in performs the following tasks:
+      ul#file-list.ms-List.ordered-list
+        li.ms-listItem #[span.ms-ListItem-primaryText 1] #[span.ms-ListItem-secondaryText Connects to SharePoint]
+        li.ms-listItem #[span.ms-ListItem-primaryText 2] #[span.ms-ListItem-secondaryText Gets the names of the first ten files and folders in OneDrive.]
+        li.ms-listItem #[span.ms-ListItem-primaryText 3] #[span.ms-ListItem-secondaryText Adds the names to the current document.]
+        li.ms-listitem #[span.ms-ListItem-primaryText 4] #[span.ms-ListItem-secondaryText writeFileNamesToPresentation]
+    div#message-area.welcome.ms-font-l
+
+  footer#footer.homefooter.ms-bgColor-neutralLight
+    div.container
+      p(style="text-align:center;") 
+        button#getGraphDataButton.popupButton.ms-Button.ms-Button--primary
+          span.ms-Button-label Get SharePoint File Names
+
+      p(style="text-align:center;") 
+        button#getsearchButton.popupButton.ms-Button.ms-Button--primary
+          span.ms-Button-label Search SharePoint

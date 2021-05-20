@@ -30,10 +30,8 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
-
-
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <CustomTab id="ShareTime">
+            <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
                 <Label resid="CommandsGroup.Label" />
                 <Icon>
@@ -58,12 +56,11 @@
                   </Action>
                 </Control>
               </Group>
-            </CustomTab>
+            </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
- 
-     <Host xsi:type="Workbook">
+      <Host xsi:type="Workbook">
         <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
@@ -71,7 +68,7 @@
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <CustomTab id="ShareTime">
+            <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
                 <Label resid="CommandsGroup.Label" />
                 <Icon>
@@ -96,7 +93,7 @@
                   </Action>
                 </Control>
               </Group>
-            </CustomTab>
+            </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -107,8 +104,8 @@
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
- <!--         <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <CustomTab id="ShareTime">
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
               <Group id="CommandsGroup">
                 <Label resid="CommandsGroup.Label" />
                 <Icon>
@@ -133,48 +130,8 @@
                   </Action>
                 </Control>
               </Group>
-            </CustomTab>
-                      </ExtensionPoint>-->
-
-
-            <ExtensionPoint xsi:type="PrimaryCommandSurface">
-              <CustomTab id="Contoso Tab">
-              <!-- If you want to use a default tab that comes with Office, remove the above CustomTab element, and then uncomment the following OfficeTab element -->
-                <!-- <OfficeTab id="TabData"> -->
-                <Label resid="residLabel4" />
-                <Group id="Group1Id12">
-                  <Label resid="residLabel4" />
-                  <Icon>
-                    <bt:Image size="16" resid="icon1_32x32" />
-                    <bt:Image size="32" resid="icon1_32x32" />
-                    <bt:Image size="80" resid="icon1_32x32" />
-                  </Icon>
-                  <Tooltip resid="residToolTip" />
-                  <Control xsi:type="Button" id="Button1Id1">
-
-                      <!-- information about the control -->
-                  </Control>
-                  <Control xsi:type="Button" id="Button1Id2">
-
-                      <!-- information about the control -->
-                  </Control>
-                  <!-- other controls, as needed -->
-                </Group>
-              </CustomTab>
-            </ExtensionPoint>
-
-          <ExtensionPoint xsi:type="ContextMenu">
-            <OfficeMenu id="ContextMenuCell">
-              <Control xsi:type="Menu" id="ContextMenu2">
-                      <!-- information about the control -->
-              </Control>
-              <!-- other controls, as needed -->
-            </OfficeMenu>
-            </ExtensionPoint>
-
-
-
-
+            </OfficeTab>
+          </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
     </Hosts>
@@ -189,13 +146,13 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:44355/home/index" />
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="AddW Microsoft Graph data to your document!" />
-        <bt:String id="TaskpaneButton.Label" DefaultValue="WShow Add-in" />
-        <bt:String id="CommandsGroup.Label" DefaultValue="WSSO Node.js" />
+        <bt:String id="GetStarted.Title" DefaultValue="Add Microsoft Graph data to your document!" />
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Add-in" />
+        <bt:String id="CommandsGroup.Label" DefaultValue="SSO Node.js" />
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started." />
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="WClick to show the SSO add-in." />
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to show the SSO add-in." />
       </bt:LongStrings>
     </Resources>
     <WebApplicationInfo>  

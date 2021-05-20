@@ -37,7 +37,7 @@ if (!window.Promise) {
 
     const msalConfig = {
         auth: {
-            clientId: "3e3f53bd-7e06-4a3e-ae53-cc84e98f7bec", //This is your client ID
+            clientId: "76f73fe7-84d5-492c-a951-7a9da540473c", //This is your client ID
             authority: "https://login.microsoftonline.com/common", 
             redirectURI: "https://localhost:44355/dialog.html", 
             navigateToLoginRequestUrl: false,

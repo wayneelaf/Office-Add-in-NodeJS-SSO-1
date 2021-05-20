@@ -12,4 +12,13 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/get-data', function (req, res, next) {
+    console.log("get-data")
+    var item = {
+        text1: req.query.text1
+    };
+    console.log(item);
+
+    
+});
 module.exports = router;

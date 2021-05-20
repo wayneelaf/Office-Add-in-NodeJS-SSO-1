@@ -13,7 +13,7 @@ function makeGraphApiCall(accessToken) {
 
         writeFileNamesToOfficeDocument(response)
         .then(function () { 
-            showMessage("Your data has been added to the document."); 
+            showMessage(writeFileNamesToPresentation(result)); 
         })
         .catch(function (error) {
             // The error from writeFileNamesToOfficeDocument will begin 
