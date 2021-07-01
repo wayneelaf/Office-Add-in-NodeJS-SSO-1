@@ -19,8 +19,6 @@ var indexRouter = require('./routes/index');
 var authRouter = require('./routes/authRoute');
 
 var app = express();
-var bodyParser = require('body-parser');
-const text1 = '';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -53,16 +51,6 @@ app.use('/auth', authRouter);
 app.get('/dialog.html', (async (req, res) => {
   return res.sendfile('dialog.html');
 }));
-app.get("/routes/views/", function(_req, res) {
-    res.render("views", { text1: text1 })
-});
-
-app.get('/product_options', (req, res) => {
-    Shopify.get_product_options(req.query.pid).then(product =>
-        res.render('product_options', { product: product })
-    );
-});
-
 
 app.get('/getuserdata', async function(req, res, next) {
   const graphToken = req.get('access_token');
@@ -72,25 +60,12 @@ app.get('/getuserdata', async function(req, res, next) {
   // Note that the last parameter, for queryParamsSegment, is hardcoded. If you reuse this code in
   // a production add-in and any part of queryParamsSegment comes from user input, be sure that it is
   // sanitized so that it cannot be used in a Response header injection attack. 
-    req.query.text1
-    console.log('New text is "' + 1 + '"');
-    
-    //async function search(){
-    //  let results = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${searchText}/&api_key=dc6zaTOxFJmzC`)
+  //const graphData = await getGraphData(graphToken, "/me/drive/root/children", "?$select=name&$top=10");
+
+    console.log('New text is '& jSearch);
     const SPpathwSearch = "/groups/{af65c412-5d67-4611-abe8-ec0a68e8b7f3}/drive/root/search(q='Category')"
-//    const SPpathwSearch = "/groups/{af65c412-5d67-4611-abe8-ec0a68e8b7f3}/drive/root/search(q=${text})"
-    const graphData = await getGraphData(graphToken, SPpathwSearch, "?select=name,id,webUrl");  
-//const graphData = await getGraphData(graphToken, "/groups/{af65c412-5d67-4611-abe8-ec0a68e8b7f3}/drive/root/search(q='Category')","?select=name");
-// const graphData = await getGraphData(graphToken, "/me/drive/root/children", "?$select=name&$top=10");
-
-// const graphData = await getGraphData(graphToken, "sites/b!yg-hqZtQY0OzGvMGlfMvDz-HwTfE9wpEvjk7rrtnN22wnkSH1hy7Q6hVDTEUOZqc", "?search=Industry");
-//netorgft6819296.sharepoint.com/:p:/r/sites/OFCSolutions
-//sites/netorgft6819296.sharepoint.com:/teams/hr:/drive
-//https://netorgft6819296.sharepoint.com/OFCDocuments
-
-
-
-  //const graphData = await getGraphData(graphToken, "/me/drive/root/children", "?$select=name&$top=10&$skip=10");
+    //    const SPpathwSearch = "/groups/{af65c412-5d67-4611-abe8-ec0a68e8b7f3}/drive/root/search(q=${text})"
+    const graphData = await getGraphData(graphToken, SPpathwSearch, "?select=name,id,webUrl");
   // If Microsoft Graph returns an error, such as invalid or expired token,
   // there will be a code property in the returned object set to a HTTP status (e.g. 401).
   // Relay it to the client. It will caught in the fail callback of `makeGraphApiCall`.
@@ -104,9 +79,9 @@ app.get('/getuserdata', async function(req, res, next) {
     const itemNames = [];
     const oneDriveItems = graphData['value'];
     for (let item of oneDriveItems){
-        itemNames.push(item['name'], item['id'], item['webUrl']);
+        itemNames.push(item['name'] & jSearch);  //-,item['id'],item['webUrl'],item['thumbnails']
     }
-
+    console.log(jSearch)
     res.send(itemNames)
   }
 });

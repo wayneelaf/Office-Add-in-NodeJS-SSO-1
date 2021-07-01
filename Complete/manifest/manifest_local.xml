@@ -101,12 +101,16 @@
         </DesktopFormFactor>
       </Host>
       <Host xsi:type="Presentation">
+       <Runtimes>
+        <Runtime resid="ContosoAddin.Url" lifetime="long" />
+      </Runtimes>
         <DesktopFormFactor>
           <GetStarted>
             <Title resid="GetStarted.Title"/>
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
+          <FunctionFile resid="ContosoAddin.Url"/>
  <!--         <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <CustomTab id="ShareTime">
               <Group id="CommandsGroup">
@@ -172,7 +176,9 @@
             </OfficeMenu>
             </ExtensionPoint>
 
-
+          <Page>
+          <SourceLocation resid="ContosoAddin.Url"/>
+          </Page>
 
 
         </DesktopFormFactor>
@@ -187,6 +193,8 @@
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812" />
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:44355/home/index" />
+        <bt:Url id="Functions.Script.Url" DefaultValue="https://localhost:44355/dist/functions.js"/>
+        <bt:Url id="ContosoAddin.Url" DefaultValue="https://localhost:44355/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="AddW Microsoft Graph data to your document!" />

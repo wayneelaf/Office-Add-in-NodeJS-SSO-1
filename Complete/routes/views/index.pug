@@ -7,14 +7,34 @@ extends layout
 block content
   div#connectContainer
     div.ms-bgColor-neutralLight.welcome
-      div.ms-fontSize-xl.ms-fontColor-themePrimary Welcome
+      //-div.ms-fontSize-xl.ms-fontColor-themePrimary Welcome
+      </form action="http://wilder.azurewebsites.net/echo">
+        <input name="searchPhrase"/>
+        <input type="submit" value="search"/>
+      </form> 
       div.ms-fontSize-xl.ms-fontColor-themePrimary Search
-      //let searchvalue: <input type="text" name="Search" value="" id="Product" placeholder="Type something..." style="text-align:center;"/>
-      a: <input type="number" name="a" id="a"><br>
-      b: <input type="number" name="b" id="b"><br>
-      Let buttonValue: <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
+      //-div.ms-fontSize-xl.ms-fontColor-themePrimary Store new value to shared state
+      //-To send data to the task pane, in a cell, enter
+      //-<strong>=CONTOSO.STOREVALUE("new value")</strong>
+      //-<div>
+      //-<input type="text" id="storeBox" />
+      //-<button onclick="storeSharedValue()">Store</button>
+      //-</div>
+       div.ms-fontSize-xl.ms-fontColor-themePrimary Get shared state value
+      //-<div>
+      //-<input type="text" id="getBox" />
+      //-<button onclick="getSharedValue()">Get</button>
+      //-</div> -->
 
-        script.
+
+
+      
+      //-let searchvalue: <input type="text" name="Search" value="" id="Product" placeholder="Type something..." style="text-align:center;"/>
+      //-a: <input type="number" name="a" id="a"><br>
+      //-b: <input type="number" name="b" id="b"><br>
+      //-Let buttonValue: <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
+
+      //-  script.
          function add(a,b) {
          var sum = parseInt(a) + parseInt(b);
          alert(sum);
@@ -39,7 +59,7 @@ block content
     div.welcome-body
       p.ms-font-xs.welcome-intro This add-in performs the following tasks:
       ul#file-list.ms-List.ordered-list
-        li.ms-listItem #[span.ms-ListItem-primaryText 1] #[span.ms-ListItem-secondaryText Connects to SharePoint]
+  //-      li.ms-listItem #[span.ms-ListItem-primaryText 1] #[span.ms-ListItem-secondaryText Connects to SharePoint]
         li.ms-listItem #[span.ms-ListItem-primaryText 2] #[span.ms-ListItem-secondaryText Gets the names of the first ten files and folders in OneDrive.]
         li.ms-listItem #[span.ms-ListItem-primaryText 3] #[span.ms-ListItem-secondaryText Adds the names to the current document.]
        

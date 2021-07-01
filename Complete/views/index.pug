@@ -3,48 +3,33 @@
 //- This file defines the UI of the task pane page.
 
 extends layout
-
+        
 block content
   div#connectContainer
     div.ms-bgColor-neutralLight.welcome
       div.ms-fontSize-xl.ms-fontColor-themePrimary Welcome
-      div.ms-fontSize-xl.ms-fontColor-themePrimary Search
-
-      //let searchvalue: <input type="text" name="Search" value="" id="Product" placeholder="Type something..." style="text-align:center;"/>
-      a: <input type="number" name="a" id="a"><br>
-      b: <input type="number" name="b" id="b"><br>
-      Let buttonValue: <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
-
-        script.
-         function add(a,b) {
-         var sum = parseInt(a) + parseInt(b);
-         alert(sum);
-         }      //let searchvalue: <input type="text" name="Search" value="" id="textInput" placeholder="Type something..." style="text-align:center;"/>
-
-         //script.
-          //var textInputElement = document.getElementById('textInput');
-          //textInputElement.addEventListener('keyup', function(){
-          //  var text = textInputElement.value;
-          //  console.log('New text is "' + text + '"');
-           
-          //  });
-
-
-   
-   
       div.ms-font-l This add-in demonstrates how to connect to Microsoft Graph from an add-in.
-    div.welcome-body
-      p.ms-font-xs.welcome-intro This add-in performs the following tasks:
-      ul#file-list.ms-List.ordered-list
-        li.ms-listItem #[span.ms-ListItem-primaryText 1] #[span.ms-ListItem-secondaryText Connects to SharePoint]
-        li.ms-listItem #[span.ms-ListItem-primaryText 2] #[span.ms-ListItem-secondaryText Gets the names of the first ten files and folders in OneDrive.]
-        li.ms-listItem #[span.ms-ListItem-primaryText 3] #[span.ms-ListItem-secondaryText Adds the names to the current document. itemNames]
-       
-    div#message-area.welcome.ms-font-l
+          div.search-body
+           <script type="text/javascript">
+           function ExampleJS(){
+           var jSearch = document.getElementById("tSearch").value;
+           console.log("Your name is: mud" & jSearch)
+           </script>
+          button#ExampleJS.popupButton.ms-Button.ms-Button--primary
+          span.ms-Button-label Search SharePoint 
+           <form name="searchForm" onSubmit="ExampleJS()">
+           <input type="text" id=tSearch name="searchPhrase"/><br />
+           <input type="submit" value="search"/>
+           </form>
+           window.alert(jSearch)
 
+
+
+  
+    div#message-area.welcome.ms-font-l
+  
   footer#footer.homefooter.ms-bgColor-neutralLight
     div.container
       p(style="text-align:center;") 
         button#getGraphDataButton.popupButton.ms-Button.ms-Button--primary
           span.ms-Button-label Get SharePoint File Names
-  
